@@ -1,13 +1,17 @@
 ﻿using System;
-namespace Laboratorio1_LucasLavín
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Laboratorio01_LucasLavin
 {
     public class Person
     {
         //Atributos
         private string nombre;
         private string apellido;
-        private string lanzar;
-        private int randomNumber;
+
         public Person(string nombre, string apellido)
         {
             this.nombre = nombre;
@@ -21,28 +25,24 @@ namespace Laboratorio1_LucasLavín
         {
             return apellido;
         }
-        public void Lanzar(string lanzar, int randomNumber)
+        public string Lanzar(int randomNumber)
         {
-            int randomNumber = new Random().Next(0, 3);
             if (randomNumber == 0)
             {
-                lanzar = "piedra";
-                this.lanzar = lanzar;
+                string lanzar = "piedra";
                 return lanzar;
             }
             else if (randomNumber == 1)
             {
-                lanzar = "papel";
-                this.lanzar = lanzar;
+                string lanzar = "papel";
                 return lanzar;
             }
-            else if (randomNumber == 2)
+            else
             {
-                lanzar = "tijera";
-                this.lanzar = lanzar;
+                string lanzar = "tijera";
                 return lanzar;
             }
         }
     }
-	
+
 }
